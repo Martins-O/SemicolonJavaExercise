@@ -38,7 +38,7 @@ public class ArithmeticSmallest {
         else{
             System.out.println(thirdnum + " is the greatest");
         }
-        //find the least among the numbers
+
         if(firstnum<secondnum & firstnum<thirdnum){
             System.out.println(firstnum + " is the lowest");
 

@@ -1,11 +1,12 @@
 package chapter6;
-//(Guess-the-Number Modification) Modify the program of Exercise 6.30 to count the num
-//        ber of guesses the player makes. If the number is 10 or fewer, display Either you know the secret
-//        or you got lucky! If the player guesses the number in 10 tries, display Aha! You know the secret!
-//        If the player makes more than 10 guesses, display You should be able to do better! Why should it
-//        take no more than 10 guesses? Well, with each “good guess,” the player should be able to eliminate
-//        half of the numbers, then half of the remaining numbers, and so on.
+/*(Guess-the-Number Modification) Modify the program of Exercise 6.30 to count the num
+       ber of guesses the player makes. If the number is 10 or fewer, display Either you know the secret
+        or you got lucky! If the player guesses the number in 10 tries, display Aha! You know the secret!
+        If the player makes more than 10 guesses, display You should be able to do better! Why should it
+        take no more than 10 guesses? Well, with each “good guess,” the player should be able to eliminate
+        half of the numbers, then half of the remaining numbers, and so on.*/
 
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -15,22 +16,25 @@ public class GuessGameMod {
 
         Scanner in = new Scanner(System.in);
         Random ran = new Random();
+        SecureRandom rand = new SecureRandom();
+
+        rand.nextInt(1, 1000);
 //
 //        System.out.println("Guess number from 1 - 1000 --> ");
 //        number = in.nextInt();
         int max = 0;
-        int answer = 800;
-        while (number != 800)  {
+        while (number != ran.nextInt())  {
             System.out.println("Guess number from 1 - 1000 --> ");
             number = in.nextInt();
             max++;
 
-            if(number > answer){
+            if(number > rand.nextInt()){
                 System.out.println("Too high, try high");
-            } else if (number < answer) {
+            } else if (number < rand.nextInt()) {
                 System.out.println("Too low, try again");
             } else{
                 System.out.println("YES! Congratulations");
+                break;
             }
         }
         System.out.println();

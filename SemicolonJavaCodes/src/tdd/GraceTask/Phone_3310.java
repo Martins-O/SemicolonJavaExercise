@@ -156,9 +156,7 @@ public class Phone_3310 {
                                         break;
                                 }
                                 switch (messages) {
-                                    case 3:
-                                        System.out.println("outbox");
-                                        break;
+                                    case 3 -> System.out.println("outbox");
                                 }
                                 switch (messages) {
                                     case 4:

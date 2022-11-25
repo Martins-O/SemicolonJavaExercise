@@ -1,34 +1,31 @@
 package chapter6;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
     public static void main(String[] args){
-        int answer, guess;
+        int guess = 0;
 
         Scanner in = new Scanner(System.in);
+        SecureRandom random = new SecureRandom();
 
         Random rand = new Random();
+        random.nextInt(1, 1000);
 
-        boolean correct = false;
-
-        answer = 760;
-
-        while (!correct){
+        while (guess != random.nextInt()){
             System.out.println("Guess a number between and 1000: ");
             guess = in.nextInt();
 
-            if(guess > answer){
+            if(guess > random.nextInt()){
                 System.out.println("Too high, try high");
-            } else if (guess < answer) {
+            } else if (guess < random.nextInt()) {
                 System.out.println("Too low, try again");
             }else {
                 System.out.println("YES! Congratulations");
-
-                correct = true;
+                break;
             }
         }
-        System.exit(0);
     }
 }

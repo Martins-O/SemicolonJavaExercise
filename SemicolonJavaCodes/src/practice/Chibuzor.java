@@ -1,7 +1,5 @@
 package practice;
 
-import java.lang.annotation.Native;
-
 public class Chibuzor {
     private int scv;
     private static int counter;

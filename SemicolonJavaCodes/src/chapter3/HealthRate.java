@@ -94,7 +94,7 @@ public class HealthRate {
 //        return 0;
         LocalDate today = LocalDate.now();
 
-        Long todayEpoch = today.toEpochDay();
+        long todayEpoch = today.toEpochDay();
         LocalDate dob = LocalDate.parse(doB);
         long dobEpoch = dob.toEpochDay();
 
