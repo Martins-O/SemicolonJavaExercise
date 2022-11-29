@@ -10,14 +10,16 @@ public class Turtle {
 
     private Pen biro;
 
-    public Turtle() {}
+    public Turtle() {
+    }
 
     public Turtle(int x, int y) {
         xCordinate = x;
         yCordinate = y;
     }
+
     public Turtle(int x, int y, Cardinal direction) {
-        this(x,y);
+        this(x, y);
         this.direction = direction;
     }
 
