@@ -1,9 +1,13 @@
 package diary;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Diary {
 
     private boolean isLocked = true;
     private String password;
+    private List<Entry> entries = new ArrayList<>();
 
     public Diary(String password, String ownersName) {
         this.password = password;
@@ -24,11 +28,27 @@ public class Diary {
         isLocked = true;
     }
 
-    public void write(String statement) {
-
+    public void write(String body, String title){
+        if(!isLocked){
+            writeIntoDiary(title, body);
+        }
+    }
+    private void writeIntoDiary(String statement, String title) {
+        int id = numberOfHappenings()+1;
+        Entry entry = new Entry(id, statement, title);
+        entries.add(entry);
     }
 
     public int numberOfHappenings() {
-        return 0;
+        return entries.size();
+    }
+
+    public Entry findEntryWithId(int id) {
+        for (Entry enty: entries) {
+            if (enty.getId()== id) {
+                return enty;
+            }
+        }
+        return null;
     }
 }

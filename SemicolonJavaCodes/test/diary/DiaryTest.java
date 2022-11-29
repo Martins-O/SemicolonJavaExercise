@@ -54,7 +54,29 @@ public class DiaryTest {
         diary.unLockWith("password");
         assertFalse(diary.isLocked());
 
-        diary.write("Hallelujah");
+        diary.write("Hallelujah", "Life");
         assertEquals(1, diary.numberOfHappenings());
+    }
+
+    @Test
+    public void entriesCannotBeAddedWhenDiaryIsLockedTest(){
+        assertTrue(diary.isLocked());
+
+        diary.write("Hallelujah", "Life");
+        assertEquals(0, diary.numberOfHappenings());
+    }
+
+    @Test
+    public void entriesCanBeFoundByIdTest(){
+        diary.unLockWith("password");
+        assertFalse(diary.isLocked());
+
+        diary.write("Hallelujah", "Life");
+        assertEquals(1, diary.numberOfHappenings());
+
+        Entry foundEntry = diary.findEntryWithId(1);
+        assertEquals(1,foundEntry.getId());
+        assertEquals("Hallelujah", foundEntry.getTitle());
+        assertEquals("Life", foundEntry.getStatement());
     }
 }
