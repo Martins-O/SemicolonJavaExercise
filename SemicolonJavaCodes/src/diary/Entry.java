@@ -37,6 +37,7 @@ public class Entry {
                 Written on %s
                 Title: %s
                 Body: %s
+                ==========================
                 """, id,time,title,statement);
 //        final StringBuffer sb = new StringBuffer("Entry{");
 //        return "Entry{" +
