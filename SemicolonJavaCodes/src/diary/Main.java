@@ -16,7 +16,6 @@ public class Main {
                 Welcome to my Diary!!!
                 Let's setup it up
                 """;
-
         print(mainMenu);
         String userName = input("Enter your name: ");
         String password = input("Enter your password: ");
@@ -98,13 +97,13 @@ public class Main {
         displayDiaryMenu();
     }
 
-    private static String input(String prompt){
+    public static String input(String prompt){
         return JOptionPane.showInputDialog(null,prompt);
 //        print(prompt);
 //        return input.nextLine();
     }
 
-    private static void print(String prompt){
+    public static void print(String prompt){
 //        System.out.println(prompt);
         JOptionPane.showMessageDialog(null, prompt);
     }

@@ -1,8 +1,5 @@
 package myersBriggs;
 
-import static myersBriggs.MyersBriggsClass.input;
-import static myersBriggs.MyersBriggsClass.print;
-
 public class Myers {
     static int partOneA = 0;
     static int partOneB = 0;
@@ -162,5 +159,12 @@ public class Myers {
         if (partFourA > partFourB) partFour = "J";
         else partFour = "P";
         return partFour;
+    }
+
+    public static String expection(String reply, String question){
+       if (!reply.equalsIgnoreCase("A") || !reply.equalsIgnoreCase("B")) {
+              return question;
+        }else
+            return reply;
     }
 }

@@ -15,7 +15,8 @@ public class MyersBriggsClass {
                 B => conserve energy, enjoy one-on-one
                 """);
         String reply = input.nextLine();
-        print(reply);
+        Myers.expection(reply, question1());
+//        print(reply);
         return reply.toUpperCase();
     }
 
@@ -26,7 +27,6 @@ public class MyersBriggsClass {
                 b => looking for meaning and possibilities
                 """);
         String reply = input.nextLine();
-
         return reply.toUpperCase();
     }
 

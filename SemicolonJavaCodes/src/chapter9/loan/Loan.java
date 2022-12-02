@@ -1,10 +1,15 @@
 package chapter9.loan;
 
-import org.jetbrains.annotations.Contract;
-
 public class Loan {
     private double principalAmount;
     private double loanTenure;
+
+    public Loan(){}
+
+    public Loan(double principalAmount, double loanTenure) {
+        this.principalAmount = principalAmount;
+        this.loanTenure = loanTenure;
+    }
 
     public double getPrincipalAmount() {
         return principalAmount;
@@ -23,7 +28,8 @@ public class Loan {
     }
 
 
-    static  void calculateMonthlyInstallmental(){
+    public double calculateMonthlyInstallmental(double principalAmount, double loanTenure){
 
+        return principalAmount / loanTenure;
     }
 }

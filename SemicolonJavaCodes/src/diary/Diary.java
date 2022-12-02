@@ -29,9 +29,8 @@ public class Diary {
     }
 
     public void write(String body, String title){
-        if(!isLocked){
-            writeIntoDiary(title, body);
-        }
+        if (isLocked)throw new IllegalArgumentException("You cannot write while is locked");
+        writeIntoDiary(title, body);
     }
     private void writeIntoDiary(String statement, String title) {
         int id = numberOfHappenings()+1;

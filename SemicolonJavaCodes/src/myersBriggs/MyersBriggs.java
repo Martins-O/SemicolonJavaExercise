@@ -1,8 +1,6 @@
 package myersBriggs;
 
-import static myersBriggs.MyersBriggsClass.print;
 import static myersBriggs.Myers.*;
-import static myersBriggs.MyersBriggsClass.question2;
 
 public class MyersBriggs {
     public static void main(String[] args) {
@@ -28,6 +26,9 @@ public class MyersBriggs {
                 case 18: questionEighteen();
                 case 19: questionNineteen();
                 case 20: questionTwenty();
+                    break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + questionNumber);
             }
         }
         System.out.println(" ".repeat(4));

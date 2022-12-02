@@ -62,8 +62,14 @@ public class DiaryTest {
     @Test
     public void entriesCannotBeAddedWhenDiaryIsLockedTest(){
         assertTrue(diary.isLocked());
+        try {
+            diary.write("Hallelujah", "Life");
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
 
-        diary.write("Hallelujah", "Life");
+//        diary.write("Hallelujah", "Life");
         assertEquals(0, diary.numberOfHappenings());
     }
 
@@ -88,5 +94,18 @@ public class DiaryTest {
 
         diary.write("Hallelujah", "Life");
         assertEquals(1, diary.numberOfHappenings());
+    }
+
+    @Test
+    public void tryToWriteWhileDiaryIsLocked(){
+        assertTrue(diary.isLocked());
+        try {
+            diary.write("Hallelujah", "Life");
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        assertThrows(IllegalArgumentException.class, () -> diary.write("Hallelujah", "Life"));
     }
 }
