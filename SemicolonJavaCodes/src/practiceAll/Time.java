@@ -5,6 +5,10 @@ public class Time {
     private int minute;
     private int second;
 
+    public Time() {
+
+    }
+
     public int getHour() {
         isValidateHour(hour);
         return hour;

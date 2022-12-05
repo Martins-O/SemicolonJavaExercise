@@ -10,6 +10,7 @@ public class Main {
         StudentRecord hr
                 = new StudentRecord();
 
+
         Record record = new Record();
 
         // Initial Employee record

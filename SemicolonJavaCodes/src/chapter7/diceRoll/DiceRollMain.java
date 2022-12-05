@@ -18,8 +18,7 @@ public class DiceRollMain {
             int sum = calculateSumOfTwoDice(dice1, dice2);
             numberOfTimesPossibleSum(sum, outcomes);
         }
-        System.out.println(Arrays.toString(outcomes));
-//        System.out.println(Arrays.toString(outcomesArray));
+        System.out.print(Arrays.toString(outcomes));
         tabularDisplay(outcomes);
         outcomeDisplay();
     }

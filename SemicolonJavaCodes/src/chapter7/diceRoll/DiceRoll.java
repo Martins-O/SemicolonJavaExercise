@@ -23,20 +23,20 @@ public class DiceRoll {
     public static void outcomeDisplay(){
         int[] outcomeArray = {2,3,4,5,6,7,8,9,10,11,12};
         for (int a = 1; a <= 6; a++) {
-            out.println(a);
+            out.print(a);
         }
         out.println( );
         for(int b = 1; b <= 6; b++) {
-            out.println(b);
+            out.print(b);
 
             for (int c = 1; c <= 6; c++) {
                 for (int d = 1; d <=6 ; d++) {
                     if (d + c == outcomeArray[d-1]) {
-                        out.println(outcomeArray[d]);
+                        out.print(outcomeArray[d]);
                     }
                 }
             }
-            out.println();
+            out.print(" ");
         }
     }
     static int calculateSumOfTwoDice(int roll1, int roll2) {

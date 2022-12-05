@@ -13,7 +13,9 @@ public class BeansMessenger {
 
     private void verifyValidPrice(int amount, int numberOfSpoons) {
         int pricePerSpoon = 50;
-        if (numberOfSpoons * pricePerSpoon > amount) throw new IllegalArgumentException("You dont enough money");
+        if (numberOfSpoons * pricePerSpoon > amount) {
+            throw new IllegalArgumentException("You dont enough money");
+        }
     }
 
     private boolean verifyMoney(boolean moneyIsFake){

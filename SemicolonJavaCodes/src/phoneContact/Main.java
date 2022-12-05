@@ -1,7 +1,5 @@
 package phoneContact;
 
-import electronicStore.Address;
-
 import java.util.Scanner;
 
 public class Main {
@@ -35,16 +33,16 @@ public class Main {
                     String comName = input.next();
                     System.out.println("(optional)Contact Address: ");
                     String houseNo = input.next();
-                    String country = input.next();
-                    String street = input.next();
-                    String city = input.next();
-                    String state = input.next();
-                    Address add = new Address(houseNo, country, street, city, state);
+//                    String country = input.next();
+//                    String street = input.next();
+//                    String city = input.next();
+//                    String state = input.next();
+//                    Address add = new Address(houseNo, country, street, city, state);
                     System.out.println("Contact Phone Number: ");
                     String num = input.next();
                     System.out.println("(optional)Contact Email Address: ");
                     String mail = input.next();
-                    record = new Record(comName,add,num,mail);
+                    record = new Record(comName,houseNo,num,mail);
 
                     phoneContactRecord.addContact(record);
                     System.out.println(record.toString());
@@ -71,7 +69,7 @@ public class Main {
                     System.out.println("Good Bye for now, WE LOVE YOU");
                     System.exit(0);
                 default:
-                    System.out.println("Invalid input");
+                    System.out.println("\nInvalid input\n");
                     break;
             }
         }
