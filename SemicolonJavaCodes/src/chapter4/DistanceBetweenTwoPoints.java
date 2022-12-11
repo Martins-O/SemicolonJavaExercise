@@ -1,5 +1,5 @@
 package chapter4;
-import java.math.BigDecimal;
+
 import java.util.Scanner;
 
 /*(Distance between two points) Write an application that reads the x and y coordinates of

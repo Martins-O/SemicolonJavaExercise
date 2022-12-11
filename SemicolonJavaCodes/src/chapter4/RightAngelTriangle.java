@@ -11,7 +11,6 @@ public class RightAngelTriangle {
          for (int i = 1; i < 10; i++) {
              for (int k = 0; k < i + 1; i++)
                 System.out.println("*");
-             System.out.println( );
          }
      }
 
