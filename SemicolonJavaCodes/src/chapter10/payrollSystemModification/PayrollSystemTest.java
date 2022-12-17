@@ -30,7 +30,7 @@ public class PayrollSystemTest {
         employees[1] = hourlyEmployee;
         employees[2] = commissionEmployee;
         employees[3] = basePlusCommissionEmployee;
-        System.out.printf("Employees processed polymorphically:%n%n");
+        System.out.printf("Employees processed polymorphic:%n%n");
 
         for (Employee currentEmployee : employees) {
             System.out.println(currentEmployee); // invokes toString

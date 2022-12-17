@@ -9,12 +9,12 @@ package com.chapter8;
 //        b) incrementing into the next year.
 
 public class DateCh8 {
-        private int month; // 1-12
-        private int day; // 1-31 based on month
-        private int year; // any year
+        private int month;
+        private int day;
+        private int year;
         private static final int[] daysPerMonth =
                 {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        // constructor: confirm proper value for month and day given the year
+
         public DateCh8(int month, int day, int year) {
             isValidating(month, day, year);
             this.month = month;
@@ -52,7 +52,11 @@ public class DateCh8 {
     }
 
 
-        public String toString() {
+    public String toString() {
             return String.format("%d/%d/%d", month, day, year);
-        }
+    }
+
+    public void incrementMonth(int day){
+
+    }
 }

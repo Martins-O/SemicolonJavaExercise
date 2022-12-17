@@ -12,7 +12,7 @@
 //        try (BufferedWriter writer =
 //                     Files.newBufferedWriter(Paths.get("Clients.xml"))){
 //
-////            Accounts accounts = JAXB.unmarshal(writer, Accounts.class);
+//            Accounts accounts = JAXB.unmarshal(writer, Accounts.class);
 //
 //            System.out.printf("%-10s%-12s%-12s%10s%n", "Account",
 //                    "First name", "Last Name", "Balance");

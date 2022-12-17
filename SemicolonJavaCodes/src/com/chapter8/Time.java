@@ -92,7 +92,7 @@ public class Time {
             incrementMinute();
         }
     }
-    private void incrementMinute() {
+    public void incrementMinute() {
         if (this.minute < 59) {
             this.minute++;
         }else {
@@ -110,7 +110,7 @@ public class Time {
                 '}';
     }
 
-    private void incrementHour() {
+    public void incrementHour() {
         if (this.hour < 23 ) {
             this.hour++;
         }else{
