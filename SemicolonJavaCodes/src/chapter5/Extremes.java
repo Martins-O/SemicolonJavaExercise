@@ -13,7 +13,6 @@ public static void main(String[] args) {
     int min = Integer.MAX_VALUE;
     int sum;
     int numOfTimes;
-    char choice;
 
     System.out.println("How many number do you want to input: ");
     numOfTimes = input.nextInt();
@@ -24,9 +23,9 @@ public static void main(String[] args) {
             if(number > max) {
                 max = number;
             }
-            if(number < min){
+            if(number < min) {
                 min = number;
-        }
+            }
         }
     System.out.println("The largest:" + max);
         System.out.println("The smallest: " + min);
