@@ -1,6 +1,6 @@
 package chibuzorAssignment;
 
-public class AsterikTriangle1 {
+public class AsteriskTriangle1 {
     public static void main (String[] args) {
         for (int count =11; count >= 0; count--) {
             for (int j=0; j < count-1; j++)
@@ -8,4 +8,5 @@ public class AsterikTriangle1 {
             System.out.println();
         }
     }
+
 }
