@@ -1,6 +1,8 @@
 package stack;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Stack;
 
 public class StackPractice {
@@ -26,5 +28,6 @@ public class StackPractice {
 		//todo iterating using forEach
 		System.out.println("for each");
 		list.forEach(System.out :: println);
+		List<Integer> lists = new ArrayList<>();
 	}
 }
