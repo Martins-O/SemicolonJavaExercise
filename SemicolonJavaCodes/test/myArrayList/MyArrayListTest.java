@@ -17,25 +17,36 @@ class MyArrayListTest {
 	public void addElementTest(){
 		myArrayList.add("34");
 		myArrayList.add("33");
+		myArrayList.add("45");
+		myArrayList.add("55");
+		myArrayList.add("12");
+		myArrayList.add("");
+		myArrayList.add("");
+		myArrayList.add("");
+		myArrayList.add("");
+		myArrayList.add("");
+		myArrayList.add("");
 		myArrayList.set(0,"45");
 		assertEquals("45", myArrayList.get(0));
 		assertEquals("33",myArrayList.get(1));
-		assertEquals(2, myArrayList.size());
+		assertEquals(11, myArrayList.size());
 		myArrayList.remove("33");
 		assertEquals(1, myArrayList.size());
 	}
 
 	@Test
 	public void addAllTest(){
-		myArrayList.add("apple");
-		myArrayList.add("banana");
+		MyArrayList myArrayList1 = new MyArrayList();
+
+		myArrayList1.add("apple");
+		myArrayList1.add("banana");
 
 		MyArrayList arrayList = new MyArrayList();
 		arrayList.add("orange");
 		arrayList.add("mango");
 
-		myArrayList.addAll(arrayList);
-		assertEquals(4, myArrayList.size());
+		int size = MyArrayList.addAll(myArrayList1, arrayList);
+		assertEquals(4, size);
 
 	}
 

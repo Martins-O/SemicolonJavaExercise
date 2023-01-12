@@ -84,6 +84,11 @@ public class MyArrayList implements List {
 		return modified;
 	}
 
+	public static int addAll(MyArrayList list1, MyArrayList list2) {
+
+		return list1.size() + list2.size();
+	}
+
 	@Override
 	public boolean addAll(int index, @NotNull Collection c) {
 		if (index < 0 || index > size()) {
