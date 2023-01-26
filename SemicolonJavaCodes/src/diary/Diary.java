@@ -43,9 +43,9 @@ public class Diary {
     }
 
     public Entry findEntryWithId(int id) {
-        for (Entry enty: entries) {
-            if (enty.getId()== id) {
-                return enty;
+        for (Entry entry: entries) {
+            if (entry.getId()== id) {
+                return entry;
             }
         }
         return null;
