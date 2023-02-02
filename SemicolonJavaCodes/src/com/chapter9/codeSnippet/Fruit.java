@@ -23,5 +23,13 @@ public class Fruit {
         System.out.println("I have fruit shape");
     }
 
-
+    @Override
+    public String toString() {
+        return "Fruit{" +
+                "taste='" + taste + '\'' +
+                ", shape='" + shape + '\'' +
+                ", calories=" + calories +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }

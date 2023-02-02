@@ -18,4 +18,11 @@ public class Dog implements Animal {
     public void eat() {
         System.out.println("ia ma eating");
     }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

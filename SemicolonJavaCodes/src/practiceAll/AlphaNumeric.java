@@ -28,4 +28,7 @@ public class AlphaNumeric {
 //        String numb = "g12g3h3k2g2";
 //        System.out.println(totalNumbers(numb));
 //    }
+public static void main(String[] args) {
+
+}
 }
